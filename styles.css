@@ -1,0 +1,9 @@
+body {
+    background-color: #F7F3EC;
+}
+
+img {
+    width: 50%;
+    border-radius: 20px;
+    border: 2px solid black;
+}
