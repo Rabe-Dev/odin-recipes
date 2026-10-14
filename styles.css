@@ -9,6 +9,7 @@ main,
 h1, h4, a,
 ul {
     margin: 2rem;
+    color: #394632
 }
 
 .site-header {
@@ -36,6 +37,7 @@ ul {
 
 img {
   height: 500px;
+  border-radius: 12px;
 }
 
 .main-nav ul {
@@ -49,17 +51,19 @@ img {
 }
 
 .main-nav a {
-  color: #3C3C3C;
+  color: #4A7C59;
+  font-weight: bold;
+  font-size: 30px;
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 6px;
   transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-    color: #4A7C59;
-    text-decoration-color: #4A7C59;
+.main-nav a:hover
+ {
+    color: #C77B45;
+    text-decoration-color: #C77B45;
 }
 
 .btn {
@@ -76,4 +80,81 @@ img {
 .btn:hover {
     background-color: #a85c29;
     transform: translateY(-2px);
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 400px));
+  gap: 24px;
+  margin: 40px 0;
+  padding: 0 24px;
+}
+
+.recipe-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.recipe-image {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe-content {
+  padding: 20px;
+}
+
+.recipe-category {
+  color: #C77B45;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.recipe-card h2 {
+  color: #394632;
+  margin: 8px 0;
+}
+
+.recipe-card p {
+  line-height: 1.6;
+}
+
+.recipe-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #6B7D55;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.recipe-link:hover {
+  color: #C77B45;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
 }
