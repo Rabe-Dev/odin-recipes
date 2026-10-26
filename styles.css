@@ -6,7 +6,7 @@ body {
 }
 
 main,
-h1, h4, a,
+h1, h4, h5, a,
 ul {
     margin: 2rem;
     color: #394632
@@ -124,6 +124,19 @@ img {
   letter-spacing: 1px;
 }
 
+.recipe-info {
+  display: block;
+  align-items: center;
+  font-weight: bold;
+}
+
+.info-icon {
+  height: 80px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 10px;
+}
+
 .recipe-card h2 {
   color: #394632;
   margin: 8px 0;
@@ -145,7 +158,6 @@ img {
   color: #C77B45;
 }
 
-/* Responsive layout */
 @media (max-width: 800px) {
   .recipe-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
